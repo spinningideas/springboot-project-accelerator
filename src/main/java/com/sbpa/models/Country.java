@@ -1,4 +1,5 @@
 package com.sbpa.models;
+
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -19,14 +20,13 @@ public class Country {
   public String currencyName;
   public String languages;
 
-  public Country() { 
+  public Country() {
     super();
   }
 
-  public Country(String countryId, String countryName, String countryCode, String countryCode3,
-      String capital, String continentCode, int area, int population,
-      double latitude, double longitude, String currencyCode, String currencyName,
-      String languages) {
+  public Country(String countryId, String countryName, String countryCode, String countryCode3, String capital,
+      String continentCode, int area, int population, double latitude, double longitude, String currencyCode,
+      String currencyName, String languages) {
     this.countryId = countryId;
     this.countryName = countryName;
     this.countryCode = countryCode;
@@ -102,33 +102,28 @@ public class Country {
       return false;
     }
     Country country = (Country) o;
-        return Objects.equals(countryId, country.countryId) && Objects.equals(countryName, country.countryName) && Objects.equals(countryCode, country.countryCode) && Objects.equals(countryCode3, country.countryCode3) && Objects.equals(capital, country.capital) && Objects.equals(continentCode, country.continentCode) && area == country.area && population == country.population && Objects.equals(latitude, country.latitude) && Objects.equals(longitude, country.longitude) && Objects.equals(currencyCode, country.currencyCode) && Objects.equals(currencyName, country.currencyName) && Objects.equals(languages, country.languages);
+    return Objects.equals(countryId, country.countryId) && Objects.equals(countryName, country.countryName)
+        && Objects.equals(countryCode, country.countryCode) && Objects.equals(countryCode3, country.countryCode3)
+        && Objects.equals(capital, country.capital) && Objects.equals(continentCode, country.continentCode)
+        && area == country.area && population == country.population && Objects.equals(latitude, country.latitude)
+        && Objects.equals(longitude, country.longitude) && Objects.equals(currencyCode, country.currencyCode)
+        && Objects.equals(currencyName, country.currencyName) && Objects.equals(languages, country.languages);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(countryId, countryName, countryCode, countryCode3, capital, continentCode, area, population, latitude, longitude, currencyCode, currencyName, languages);
+    return Objects.hash(countryId, countryName, countryCode, countryCode3, capital, continentCode, area, population,
+        latitude, longitude, currencyCode, currencyName, languages);
   }
 
   @Override
   public String toString() {
-    return "{" +
-      " countryId:'" + getCountryId() + "'" +
-      ", countryName:'" + getCountryName() + "'" +
-      ", countryCode:'" + getCountryCode() + "'" +
-      ", countryCode3:'" + getCountryCode3() + "'" +
-      ", capital:'" + getCapital() + "'" +
-      ", continentCode:'" + getContinentCode() + "'" +
-      ", area:'" + getArea() + "'" +
-      ", population:'" + getPopulation() + "'" +
-      ", latitude:'" + getLatitude() + "'" +
-      ", longitude:'" + getLongitude() + "'" +
-      ", currencyCode:'" + getCurrencyCode() + "'" +
-      ", currencyName:'" + getCurrencyName() + "'" +
-      ", languages:'" + getLanguages() + "'" +
-      "}";
+    return "{" + " countryId:'" + getCountryId() + "'" + ", countryName:'" + getCountryName() + "'" + ", countryCode:'"
+        + getCountryCode() + "'" + ", countryCode3:'" + getCountryCode3() + "'" + ", capital:'" + getCapital() + "'"
+        + ", continentCode:'" + getContinentCode() + "'" + ", area:'" + getArea() + "'" + ", population:'"
+        + getPopulation() + "'" + ", latitude:'" + getLatitude() + "'" + ", longitude:'" + getLongitude() + "'"
+        + ", currencyCode:'" + getCurrencyCode() + "'" + ", currencyName:'" + getCurrencyName() + "'" + ", languages:'"
+        + getLanguages() + "'" + "}";
   }
-
-
 
 }

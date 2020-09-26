@@ -19,11 +19,12 @@ public class ContinentsRepository {
     List<Continent> continents = Collections.emptyList();
     try {
       File file = new ClassPathResource("data/continents.json").getFile();
-      continents = objectMapper.readValue(file, new TypeReference<List<Continent>>() {});
+      continents = objectMapper.readValue(file, new TypeReference<List<Continent>>() {
+      });
     } catch (Exception e) {
       e.printStackTrace();
     }
     return continents;
   }
- 
+
 }

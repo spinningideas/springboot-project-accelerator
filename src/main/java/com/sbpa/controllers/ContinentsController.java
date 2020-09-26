@@ -17,7 +17,7 @@ public class ContinentsController {
 	public ResponseEntity<List<Continent>> continents(@RequestParam(value = "name", defaultValue = "World") String name) {
 		ContinentsRepository repo = new ContinentsRepository();
 		List<Continent> continents = repo.GetContinents();
-		return ResponseEntity.ok(continents);	
+		return ResponseEntity.ok(continents);
 	}
 
 }

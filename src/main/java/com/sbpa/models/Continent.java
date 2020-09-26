@@ -9,7 +9,7 @@ public class Continent {
   public String continentCode;
   public String continentName;
 
-  public Continent() { 
+  public Continent() {
     super();
   }
 
@@ -32,14 +32,14 @@ public class Continent {
   }
 
   @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof Continent)) {
-            return false;
-        }
-        Continent continent = (Continent) o;
-        return Objects.equals(continentId, continent.continentId);
+  public boolean equals(Object o) {
+    if (o == this)
+      return true;
+    if (!(o instanceof Continent)) {
+      return false;
+    }
+    Continent continent = (Continent) o;
+    return Objects.equals(continentId, continent.continentId);
   }
 
   @Override
@@ -49,11 +49,8 @@ public class Continent {
 
   @Override
   public String toString() {
-    return "{" +
-      " continentId:'" + getContinentId() + "'" +
-      ", continentCode:'" + getContinentCode() + "'" +
-      ", continentName:'" + getContinentName() + "'" +
-      "}";
+    return "{" + " continentId:'" + getContinentId() + "'" + ", continentCode:'" + getContinentCode() + "'"
+        + ", continentName:'" + getContinentName() + "'" + "}";
   }
- 
+
 }
