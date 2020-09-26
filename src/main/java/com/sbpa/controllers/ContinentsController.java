@@ -14,8 +14,8 @@ public class ContinentsController {
 
 	@GetMapping("/continents")
 	public ResponseEntity<List<Continent>> continents() {
-		ContinentsRepository repo = new ContinentsRepository();
-		List<Continent> continents = repo.GetContinents();
+		final var repo = new ContinentsRepository();
+		final List<Continent> continents = repo.GetContinents();
 		return ResponseEntity.ok(continents);
 	}
 

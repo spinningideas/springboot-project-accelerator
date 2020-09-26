@@ -21,9 +21,7 @@ public class CountriesRepository {
     List<Country> countriesResult = new ArrayList<Country>();
     try {
       File file = new ClassPathResource("data/countries.json").getFile();
-      countries = objectMapper.readValue(file, new TypeReference<List<Country>>() {
-      });
-
+      countries = objectMapper.readValue(file, new TypeReference<List<Country>>() {});
       for (Country c : countries) {
         if (c.continentCode.equals(continentCode)) {
           countriesResult.add(c);
