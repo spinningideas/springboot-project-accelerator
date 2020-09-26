@@ -1,22 +1,18 @@
 package com.sbpa.repositories;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-import javax.naming.ConfigurationException;
-
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sbpa.models.Continent;
 
 import org.springframework.core.io.ClassPathResource;
 
 public class ContinentsRepository {
+
   public List<Continent> GetContinents() {
     ObjectMapper objectMapper = new ObjectMapper();
     objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
@@ -29,4 +25,5 @@ public class ContinentsRepository {
     }
     return continents;
   }
+ 
 }

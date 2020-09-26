@@ -1,8 +1,6 @@
 package com.sbpa.models;
 
 import java.util.Objects;
-//import java.util.UUID;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
