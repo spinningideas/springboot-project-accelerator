@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "a2160d5a-fa27-4b4e-b070-d62891fc585f",
+		"name": "Spring Boot Project Accelerator API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Continents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/continents",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"continents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries By Continent Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/countries/NA",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"countries",
+						"NA"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
